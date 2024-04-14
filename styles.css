@@ -1,0 +1,30 @@
+.error-icon {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .error-icon::before {
+    content: "!";
+    color: red;
+  }
+  
+  .error-tooltip {
+    color: red;
+  }
+
+  .btn-purple {
+    background-color: purple;
+    color: white;
+  }
+  
+  .btn-purple:hover {
+    background-color: darkpurple;
+  }
+  .custom-container {
+    width: 40%;
+    margin: 0 auto; 
+  }
