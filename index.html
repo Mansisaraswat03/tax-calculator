@@ -8,40 +8,49 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="custom-container mx-auto border border-black p-5 m-3">
-    <h1 class="text-center mb-2">Tax Calculator</h1>
+  <div class="container border border-black p-4 m-3">
+    <h1 class="text-center mb-4">Tax Calculator</h1>
     <form id="taxForm">
-      <div>
-        <label for="income" class="col-sm-6 col-form-label"><b>Enter Gross Annual Income:</label><br/>
-        <div class="col-sm-9">
+      <div class="form-group row">
+        <label for="income" class="col-sm-5 col-form-label"><b>Enter Gross Annual Income:</b></label>
+        <div class="col-sm-8">
           <input type="text" class="form-control" placeholder="Enter Gross Annual Income" pattern="[0-9]*" id="income" required>
           <span class="error-icon"></span>
           <div class="invalid-feedback"></div>
-        </div><br/>
-        <label for="extraIncome" class="col-sm-6 col-form-label">Enter extra Income:</label><br/>
-        <div class="col-sm-9">
-          <input type="text" class="form-control mb-1" placeholder="Enter extra Income" pattern="[0-9]*" id="extraIncome">
-          <span class="error-icon"></span>
         </div>
-        <label for="age" class="col-sm-5 col-form-label mt-3">Enter age group:</label><br/>
-        <div class="col-sm-9">
-          <select class="form-control mb-1" id="age" required>
+      </div>
+      <div class="form-group row">
+        <label for="extraIncome" class="col-sm-5 col-form-label"><b>Enter Extra Income:</b></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Enter Extra Income" pattern="[0-9]*" id="extraIncome">
+          <span class="error-icon"></span>
+          <div class="invalid-feedback"></div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="age" class="col-sm-6 col-form-label"><b>Enter Age Group:</b></label><br/>
+        <div class="col-sm-8">
+          <select class="form-control" id="age" required>
             <option value="">Select Age Group</option>
             <option value="<40">&lt; 40</option>
             <option value=">=40&<60">&ge; 40 &lt; 60</option>
             <option value=">=60">&ge; 60</option>
           </select>
           <span class="error-icon"></span>
+          <div class="invalid-feedback"></div>
         </div>
-        <label for="deductions" class="col-sm-7 col-form-label mt-3">Enter total applicable deductions:</label><br/>
-        <div class="col-sm-9">
-          <input type="text" class="form-control mb-1" placeholder="Enter total applicable deductions" pattern="[0-9]*" id="deductions">
+      </div>
+      <div class="form-group row">
+        <label for="deductions" class="col-sm-5 col-form-label"><b>Enter Total Applicable Deductions:</b></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" placeholder="Enter Total Applicable Deductions" pattern="[0-9]*" id="deductions">
           <span class="error-icon"></span>
+          <div class="invalid-feedback"></div>
         </div>
       </div>
       <div class="form-group row mt-5">
         <div class="col-sm-12 text-center">
-          <button type="submit" class="btn btn-purple">Calculate Tax</button>
+          <button type="submit" class="btn btn-primary">Calculate Tax</button>
         </div>
       </div>
     </form>
